@@ -46,13 +46,13 @@ public class ApiTest {
     @Test
     public void answer() throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-        HttpPost post = new HttpPost("https://api.zsxq.com/v2/topics/5122151445182244/answer");
+        HttpPost post = new HttpPost("https://api.zsxq.com/v2/topics/5122151821522254/answer");
         post.addHeader("cookie", "zsxq_access_token=26715899-EE32-586E-9280-2285B61C487F_E34D8DFA00329707; abtest_env=product; zsxqsessionid=dd02fdedecdea636d14ba6b1bc94924d");
         post.addHeader("Content-Type", "application/json;charset=utf8");
 
         String paramJson = "{\n" +
                 "  \"req_data\": {\n" +
-                "    \"text\": \"在的在的\\n\",\n" +
+                "    \"text\": \"睡觉就行了\\n\",\n" +
                 "    \"image_ids\": [],\n" +
                 "    \"silenced\": false\n" +
                 "  }\n" +
