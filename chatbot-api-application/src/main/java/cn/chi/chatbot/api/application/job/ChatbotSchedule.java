@@ -43,8 +43,8 @@ public class ChatbotSchedule {
     private IOpenAI openAI;
 
     // 表达式：cron.qqe2.com
-    // 注解：表示每5秒调一次该函数
-    @Scheduled(cron = "0/5 * * * * ?")
+    // 注解：表示每20秒调一次该函数
+    @Scheduled(cron = "0/20 * * * * ?")
     public void run() {
         try {
             // 让调用时间变得不规律，防止被风控抓到
