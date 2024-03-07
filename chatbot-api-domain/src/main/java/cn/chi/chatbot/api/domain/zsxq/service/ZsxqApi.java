@@ -34,6 +34,7 @@ public class ZsxqApi implements IZsxqApi {
 
     private Logger logger = LoggerFactory.getLogger(ZsxqApi.class);
 
+    // 获取用户的问题
     @Override
     public UnAnsweredQuestionsAggregates queryUnAnsweredQuestionsTopicId(String groupId, String cookie) throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
@@ -52,6 +53,8 @@ public class ZsxqApi implements IZsxqApi {
         }
     }
 
+
+    // 回答问题
     @Override
     public boolean answer(String groupId, String cookie, String topicId, String text, boolean silenced) throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();

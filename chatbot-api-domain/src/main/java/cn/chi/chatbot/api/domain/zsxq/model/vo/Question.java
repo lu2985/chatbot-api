@@ -12,6 +12,7 @@ public class Question {
 
     private Questionee questionee;
 
+    // 保存问题
     private String text;
 
     private boolean expired;

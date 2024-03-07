@@ -51,13 +51,13 @@ public class OpenAI implements IOpenAI {
 
         HttpPost post = new HttpPost("https://api.openai.com/v1/chat/completions");
         post.addHeader("Content-Type", "application/json");
-        post.addHeader("Authorization", "Bearer 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");
+        post.addHeader("Authorization", "Bearer " + openAiKey);
         //将 build 配置设置到 post 请求中包括先前指定的代理设置。
         post.setConfig(build);
 
         String paramJson = "{\n" +
                 "     \"model\": \"gpt-3.5-turbo\",\n" +
-                "     \"messages\": [{\"role\": \"user\", \"content\": \"给我写一个java的冒泡排序\"}],\n" +
+                "     \"messages\": [{\"role\": \"user\", \"content\": \"" + question + "\"}],\n" +
                 "     \"temperature\": 0.7\n" +
                 "   }";
 

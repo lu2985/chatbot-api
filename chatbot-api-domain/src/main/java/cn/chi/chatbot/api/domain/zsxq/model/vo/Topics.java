@@ -14,6 +14,7 @@ public class Topics {
 
     private String type;
 
+    // 问题类
     private Question question;
 
     private boolean answered;
