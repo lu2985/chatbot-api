@@ -40,7 +40,8 @@ public class OpenAI implements IOpenAI {
 
     @Override
     public String doChatGPT(String question) throws IOException {
-        String pro = "127.0.0.1";//本机地址
+        //String pro = "127.0.0.1";//本机地址
+        String pro = "host.docker.internal";//本机地址
         int pro1 = 10809; //代理端口号
         //创建一个 HttpHost 实例，这样就设置了代理服务器的主机和端口。
         HttpHost httpHost = new HttpHost(pro, pro1);

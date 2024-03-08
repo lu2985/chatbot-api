@@ -64,15 +64,6 @@ public class ZsxqApi implements IZsxqApi {
         post.addHeader("user-agent", "\n" +
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0");
 
-        // 用作测试就行了
-        //String paramJson = "{\n" +
-        //        "  \"req_data\": {\n" +
-        //        "    \"text\": \"" + text + "\\n\",\n" +
-        //        "    \"image_ids\": [],\n" +
-        //        "    \"silenced\": " + silenced + "\n" +
-        //        "  }\n" +
-        //        "}";
-
         AnswerReq answerReq = new AnswerReq(new ReqData(text, silenced));
         String paramJson = JSONObject.fromObject(answerReq).toString();
 

@@ -76,7 +76,7 @@ public class ChatbotSchedule {
             String answer = openAI.doChatGPT(topic.getQuestion().getText().trim());
             //3.问题回复
             boolean status = zsxqApi.answer(groupId, cookie, topic.getTopic_id(), answer, false);
-            logger.info("编号：{} 问题：{} 回答：{} 状态：{} ", groupId, topic.getQuestion().getText(), answer, status);
+            logger.info("编号：{} 问题：{} 回答：{} 回答状态：{} ", groupId, topic.getQuestion().getText(), answer, status);
 
         } catch (IOException e) {
             logger.error("自动回答异常", e);
